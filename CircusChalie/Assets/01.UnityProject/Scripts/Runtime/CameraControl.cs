@@ -23,8 +23,8 @@ public class CameraControl : MonoBehaviour
 
         
         
-        if(PlayerPos.x >= 33f){
-            transform.position = new Vector3(38.5f , transform.position.y, transform.position.z);
+        if(PlayerPos.x >= 162f){
+            transform.position = new Vector3(167.5f , transform.position.y, transform.position.z);
         }
         else if ( PlayerPos.x <= -6.25f){
             transform.position = new Vector3(-0.75f , transform.position.y, transform.position.z);

@@ -49,12 +49,7 @@ public class PlayerController : MonoBehaviour
             float xSpeed = xInput * speed;
             Vector2 newVelocity = new Vector2(xSpeed, 0f);
             
-            if(transform.position.x <-7.5f&&xInput<0||transform.position.x>45f&&xInput>0){
-                playerRigidBody.velocity = new Vector2(0f, 0f);
-            }
-            else{
             playerRigidBody.velocity = newVelocity;
-            }
 
 
             if(Input.GetMouseButtonDown(0))
