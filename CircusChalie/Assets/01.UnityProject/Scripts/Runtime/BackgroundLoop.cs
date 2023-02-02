@@ -8,7 +8,7 @@ public class BackgroundLoop : MonoBehaviour
     private RectTransform rectTransform;
     //private TMP_Text signText;
 
-    // Start is called before the first frame update
+    //오브젝트 풀 생성해서 꺼내오게?
     private void Start() {
         rectTransform = GetComponent<RectTransform>();
         for(int i = 0; i<11; i++){
@@ -18,7 +18,7 @@ public class BackgroundLoop : MonoBehaviour
                 rectTransform.anchoredPosition = new Vector2(i*1280,0);
 
                 signNum = 100 - 10*i;
-                transform.Find("Sign").GetComponent<TMP_Text>().text = $"{signNum}m";
+                transform.Find("Sign").GetComponent<TMP_Text>().text = $"{signNum}";
 
                 if(i == 0)
                 {

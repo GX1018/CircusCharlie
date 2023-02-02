@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class FireRingSpawn : MonoBehaviour
 {
-    public GameObject FireRing;
-    public GameObject FireRing_2;
-
-    public GameObject player;
+    private GameObject FireRing;
+    private GameObject FireRing_2;
+    private GameObject FireRing_3;
+    private GameObject player;
 
 
     private float timeAfterSpawn;
@@ -18,6 +18,9 @@ public class FireRingSpawn : MonoBehaviour
 
         player = GameObject.Find("Player");
 
+        FireRing = Resources.Load<GameObject>("Prefabs/FireRing");
+        FireRing_2 = Resources.Load<GameObject>("Prefabs/FireRing_2");
+        FireRing_3 = Resources.Load<GameObject>("Prefabs/FireRing_3");
     }
 
     // Update is called once per frame
@@ -35,13 +38,18 @@ public class FireRingSpawn : MonoBehaviour
         {
             int ranNum = Random.Range(0,10);
             timeAfterSpawn=0f;
-            if(ranNum <7)
+            if(ranNum <5)
             {
                 GameObject ring = Instantiate(FireRing, transform.position, transform.rotation, GameObject.Find("GameObjs").transform);
             }
-            else{
+            else if(5<=ranNum&&ranNum<=8)
+            {
                 GameObject ring = Instantiate(FireRing_2, transform.position, transform.rotation, GameObject.Find("GameObjs").transform);
 
+            }
+            else
+            {
+                GameObject ring = Instantiate(FireRing_3, new Vector2(transform.position.x, transform.position.y+0.3f), transform.rotation, GameObject.Find("GameObjs").transform);
             }
         }
     }
