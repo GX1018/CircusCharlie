@@ -43,11 +43,12 @@ public class PlayerController : MonoBehaviour
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
             lion.GetComponent<BoxCollider2D>().enabled = false;
 
-            
+            GameManager.Instance.Die();
+
             //playerRigidBody.AddForce(new Vector2(0, 1));
 
-            //return;
-            GFunc.LoadScene(GData.SCENE_NAME_PLAY);
+            return;
+            //GFunc.LoadScene(GData.SCENE_NAME_PLAY);
             }
         
         if(isClear == true)
@@ -71,9 +72,7 @@ public class PlayerController : MonoBehaviour
                 //playerRigidBody.velocity = Vector2.zero;
                 isGrounded=false;
             }*/
-
-
-            
+           
         }
         animator.SetBool("Grounded", isGrounded);
 

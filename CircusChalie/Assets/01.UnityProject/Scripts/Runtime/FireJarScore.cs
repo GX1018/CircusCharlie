@@ -20,6 +20,7 @@ public class FireJarScore : MonoBehaviour
         if(other.tag ==  "Player")
         {
             other.GetComponent<PlayerController>().JumpJar();
+            GameManager.Instance.score += 200;
             GFunc.GetRootObj("UiObjs").transform.Find("Ui_Text").GetComponent<Ui_Text>().JumpJar();
         }
     }

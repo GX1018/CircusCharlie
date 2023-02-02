@@ -21,6 +21,7 @@ public class GoldPocket : MonoBehaviour
         if(other.tag == "Player")
         {
             other.GetComponent<PlayerController>().GettingGold();
+            GameManager.Instance.score +=500;
             GFunc.GetRootObj("UiObjs").transform.Find("Ui_Text").GetComponent<Ui_Text>().GettingGold();
             gameObject.SetActive(false);
         }

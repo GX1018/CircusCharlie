@@ -25,7 +25,7 @@ public class Ui_Text : MonoBehaviour
             timeAfterStart = 0;
             
         }
-        gameObject.GetComponent<TMP_Text>().text = $"SCORE - {score} \t BONUS - {bonus}\t STAGE - 01";
+        gameObject.GetComponent<TMP_Text>().text = $"SCORE - {GameManager.Instance.score:D8} \t HI - {GameManager.Instance.highScore:D8}\t STAGE - 01\nLife - {GameManager.Instance.life}\t BONUS - {bonus}";
     }
     public void GettingGold()
     {

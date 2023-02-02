@@ -21,6 +21,7 @@ public class FireRingScore : MonoBehaviour
         if(other.tag ==  "Player")
         {
             other.GetComponent<PlayerController>().JumpFireRing();
+            GameManager.Instance.score += 100;
             GFunc.GetRootObj("UiObjs").transform.Find("Ui_Text").GetComponent<Ui_Text>().JumpFireRing();
         }
     }
