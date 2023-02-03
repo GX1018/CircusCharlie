@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - RemoveRing
+  - JumpSpace
   layers:
   - Default
   - TransparentFX

@@ -732,6 +732,7 @@ GameObject:
   - component: {fileID: 3047375959521760339}
   - component: {fileID: 3834824619227309405}
   - component: {fileID: 2713840088863712964}
+  - component: {fileID: 1675025378925655269}
   m_Layer: 0
   m_Name: FireJar
   m_TagString: Untagged
@@ -840,6 +841,26 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.000000059604645}
   serializedVersion: 2
   m_Radius: 0.08
+--- !u!95 &1675025378925655269
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5984799075168121323}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1fbffa9e4ead8dc419efd3875b906558, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &7910182405038839975
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,6 +22,14 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(GameManager.Instance.isDebugMode==true)
+        {
+            speed = 200f;
+        }
+        else{
+            speed = 5f;
+
+        }
         playerRigidBody = GetComponent<Rigidbody2D>();
 
         lion = GameObject.Find("Player_Lion");
@@ -34,14 +42,21 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(GameManager.Instance.isDebugMode);
         //Debug.Log(transform.position.x);
         //Debug.Log(transform.position.y);
 
         Debug.Log($"컨트롤 이즈그라운디드?{isGrounded}");
 
-        if(isDead == true){
+        if(isClear == true)
+        {
+            GameManager.Instance.Clear();
+        }
+        
+        if(isDead == true&& GameManager.Instance.isDebugMode!=true)
+        {
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
-            lion.GetComponent<BoxCollider2D>().enabled = false;
+            //lion.GetComponent<BoxCollider2D>().enabled = false;
 
             GameManager.Instance.Die();
 
@@ -49,7 +64,7 @@ public class PlayerController : MonoBehaviour
 
             return;
             //GFunc.LoadScene(GData.SCENE_NAME_PLAY);
-            }
+        }
         
         if(isClear == true)
         {
@@ -120,6 +135,7 @@ public class PlayerController : MonoBehaviour
 
 
     public void Die(){
+        
         animator.SetTrigger("Die"); 
         isDead =true;
     }
@@ -127,6 +143,7 @@ public class PlayerController : MonoBehaviour
     public void Clear()
     {
         animator.SetTrigger("Clear");
+        this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
         isClear = true;
     }
 }

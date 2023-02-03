@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/01.UnityProject/Scenes/00.InitScene.unity
+    path: 
     guid: ffb5c6bf658ed17459eae5b5c4f4cdc9
   - enabled: 1
     path: Assets/01.UnityProject/Scenes/01.TitleScene.unity
@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/01.UnityProject/Scenes/02.PlayScene.unity
     guid: cb790772255b80e4d8c4f8767d541f73
+  - enabled: 1
+    path: Assets/01.UnityProject/Scenes/04.ClearScene.unity
+    guid: 3d756dd585aadbb4cb45cecd0091042e
+  - enabled: 1
+    path: Assets/01.UnityProject/Scenes/05.GameOverScene.unity
+    guid: 38eaa6de628c5f24d852a2a9df2bc40f
+  - enabled: 1
+    path: Assets/01.UnityProject/Scenes/99.DebugScene.unity
+    guid: 7b019e5d915e3124cbd4b7dbc6c08d1c
   m_configObjects: {}

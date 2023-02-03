@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2370762748467403094}
   - component: {fileID: 2370762748467403089}
   - component: {fileID: 5960122472746134078}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: FireRing_3
   m_TagString: Respawn
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 4891869706791267529}
   - component: {fileID: 7497107765595344231}
   - component: {fileID: 8500225372855637664}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: GoldPocket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
