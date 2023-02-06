@@ -34,7 +34,7 @@ public class FireRingSpawn : MonoBehaviour
         Vector3 PlayerPos = player.transform.position;
         string sceneName = SceneManager.GetActiveScene().name;
 
-        if(sceneName== GData.SCENE_NAME_PLAY)
+        if(sceneName== GData.SCENE_NAME_PLAY||sceneName == GData.SCENE_NAME_Debug)
         {
         transform.position = new Vector3((PlayerPos.x+18f), transform.position.y, transform.position.z);
         }
@@ -75,7 +75,8 @@ public class FireRingSpawn : MonoBehaviour
     public void ActiveRing()
     {
         //Debug.Log($"{RingPool.ringPool[0]} 리스트");
-        Debug.Log($"{RingPool.monkeyPool[0]} monkey");
+        //Debug.Log($"{RingPool.monkeyPool[0]} monkey");
+
         string sceneName = SceneManager.GetActiveScene().name;
 
         if(sceneName== GData.SCENE_NAME_PLAY)
@@ -107,5 +108,19 @@ public class FireRingSpawn : MonoBehaviour
             RingPool.monkeyPool[ringNum].SetActive(true);
             ringNum++;
         }
+        else if(sceneName== GData.SCENE_NAME_Debug)
+        {
+            if(ringNum > RingPool.ringPool.Count)
+            {
+                ringNum = 0;
+            }
+
+            RingPool.ringPool[ringNum].transform.position = this.transform.position;
+            
+            RingPool.ringPool[ringNum].GetComponent<RectTransform>().localScale = new Vector2(1,1);
+            RingPool.ringPool[ringNum].SetActive(true);
+            ringNum++;
+        }
     }
+    
 }

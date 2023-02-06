@@ -64,7 +64,7 @@ public class RingPool : MonoBehaviour
         //fireRing1 = Resources.Load<GameObject>("Prefabs/FireRing");
         //fireRing2 = Resources.Load<GameObject>("Prefabs/FireRing_2");
         //fireRing3 = Resources.Load<GameObject>("Prefabs/FireRing_3");
-        if(sceneName == GData.SCENE_NAME_PLAY)
+        if(sceneName == GData.SCENE_NAME_PLAY||sceneName == GData.SCENE_NAME_Debug)
         {
             for(int i = 0; i < ring1Num; i ++)
             {

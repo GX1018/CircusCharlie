@@ -33,6 +33,17 @@ public class BgInstaniate : MonoBehaviour
                 bgImage.name = $"bg{i}";
             }
         }
+        if(sceneName == GData.SCENE_NAME_Debug)
+        {
+            
+            bgPrefab = Resources.Load<GameObject>("Prefabs/BgImage");
+    
+            for(int i = 0; i<11; i++)
+            {
+                GameObject bgImage = Instantiate(bgPrefab,gameObject.transform);
+                bgImage.name = $"bg{i}";
+            }
+        }
 
 
     }

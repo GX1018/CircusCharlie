@@ -25,7 +25,7 @@ public class CameraControl : MonoBehaviour
         //Debug.Log(transform.position.x);
 
 
-        if(sceneName == GData.SCENE_NAME_PLAY)
+        if(sceneName == GData.SCENE_NAME_PLAY||sceneName == GData.SCENE_NAME_Debug)
         {
             if(PlayerPos.x >= 162f){
                 transform.position = new Vector3(167.5f , transform.position.y, transform.position.z);
